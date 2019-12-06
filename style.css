@@ -1,0 +1,79 @@
+
+
+/* making the header image the same size as the screen, so it is the background until you scroll */
+			
+			.jumbotron {
+			text-align: center;
+			color: white;
+		}
+		
+			#firstJumbotron {
+				background-image: url('background.jpg');
+				background-size: cover;
+				background-repeat: no-repeat;
+				height: 100vh;
+				padding-top: 9%;
+			}
+				
+			#intro {
+				margin-left: 50px;
+				margin-right: 50px;
+				padding: 30px;
+			}
+
+			.card-deck {
+				margin-left: 20%;
+				margin-right: 20%;
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
+			
+			#projects {
+				margin: 5%;
+			}
+		
+		form {
+			margin-bottom: 10%;
+			margin-left: 5%;
+		}
+		.header {
+			margin: 10% 5% 0% 5%;
+		} 
+		#contact {
+			width: 600px;
+			margin: auto;
+		}
+		
+		#home {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		
+		#secondJumbotron {
+			margin: 0;
+			background-color: #343A40;
+		}
+		#appstore {
+			width: 200px;
+		}
+		
+		#linkedin {
+			width: 105px;
+			position: relative;
+			top: -1px;
+		}
+		#instagram {
+			width: 130px;
+			position: relative;
+			top: 4px;
+		}
+		#youtube {
+			width: 110px;
+			position: relative;
+			top: 4px;
+		}
+		#facebook {
+			width: 115px;
+			position: relative;
+			top: -4px;
+		}
