@@ -142,18 +142,21 @@
 		</div>
 	
 		<form>
+			<div id="errorMessage" role="alert"></div>
+			<div id="successMessage" role="alert">Your message has been sent!</div>
+
 			 <div class="form-group">
 				<label for="exampleFormControlInput1">Email address</label>
 				<input type="email" class="form-control" id="email" placeholder="name@example.com">
 			</div>
 			<div class="row">
-				<div id = "enterValueSection" class="col">
+				<div class="col">
 					<label>First Name</label>
-					<p><input type = "text" class="form-control" id = "firstName" placeholder=""></p>
+					<p><input type="text" class="form-control" id = "firstName"></p>
 				</div>
-				<div id = "enterValueSection" class="col">
+				<div class="col">
 					<label>Last Name</label>
-					<p><input type = "text" class="form-control" id = "lastName" placeholder=""></p>
+					<p><input type="text" class="form-control" id = "lastName"></p>
 				</div>
 			</div>
 			<div class="form-group">
@@ -165,7 +168,7 @@
 				<textarea class="form-control" id="message" rows="3"></textarea>
 			</div>
 			
-			<button type="button" id = "contactUsSendButton" class="btn btn-dark">Send</button>
+			<button type="button" id="submitButton" class="btn btn-dark">Send</button>
 			
 		</form>		
 	</div>	

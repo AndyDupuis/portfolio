@@ -31,10 +31,17 @@
 			#projects {
 				margin: 5%;
 			}
+
+			.carousel-inner {
+				max-height: 60%;
+			}
 		
 		form {
 			margin-bottom: 10%;
 			margin-left: 5%;
+		}
+		#successMessage {
+			display:none;
 		}
 		.header {
 			margin: 10% 5% 0% 5%;
