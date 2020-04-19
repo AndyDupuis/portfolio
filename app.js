@@ -5,47 +5,54 @@
   		return regex.test(email);
 	}
 
-	$("#submitButton").click(function() {
+
+
+
+		$("#submitButton").click(function() {
 	
-		var fieldsMissing = "";
-		var errorMessage = "";
+
+			var fieldsMissing = "";
+			var errorMessage = "";
 	
-		if($("#email").val() == ""){
-			fieldsMissing += "<br>Email";
-		}
-		if($("#firstName").val() == ""){
-			fieldsMissing += "<br>First Name";
-		}
-		if($("#lastName").val() == ""){
-			fieldsMissing += "<br>Last Name";
-		}
-		if($("#subject").val() == ""){
-			fieldsMissing += "<br>Subject";
-		} 
-		if($("#message").val() == ""){
-			fieldsMissing += "<br>Message";
-		}
+			if($("#email").val() == ""){
+				fieldsMissing += "<br>Email";
+			}
+			if($("#firstName").val() == ""){
+				fieldsMissing += "<br>First Name";
+			}
+			if($("#lastName").val() == ""){
+				fieldsMissing += "<br>Last Name";
+			}
+			if($("#subject").val() == ""){
+				fieldsMissing += "<br>Subject";
+			} 
+			if($("#message").val() == ""){
+				fieldsMissing += "<br>Message";
+			}
 
-		if (fieldsMissing != ""){
-			errorMessage += "<p>The following field(s) are missing:" + fieldsMissing;
-		}
+			if (fieldsMissing != ""){
+				errorMessage += "<p>The following field(s) are missing:" + fieldsMissing;
+			}
 
-		if(isEmail($("#email").val()) == false){
-			errorMessage += "<p>Your email address is not valid</p>";
-		}
+			if(isEmail($("#email").val()) == false){
+				errorMessage += "<p>Your email address is not valid</p>";
+			}
 
-		if (errorMessage != ""){
-			$("#errorMessage").addClass("alert alert-danger");
-			$("#errorMessage").html(errorMessage);
-		} else {
-			$("#errorMessage").hide();
-			$("#successMessage").addClass("alert alert-success");
-			$("#successMessage").show();
-		}
+			if (errorMessage != ""){
+				$("#errorMessage").addClass("alert alert-danger");
+				$("#errorMessage").html(errorMessage);
+			} else {
+				$("#errorMessage").hide();
+				$("#successMessage").addClass("alert alert-success");
+				$("#successMessage").show();
+			}
 
-	});
+			});
 
 
+
+		});
+		
 
 
 
