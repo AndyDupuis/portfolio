@@ -1,190 +1,199 @@
 
+/* -------------------------------------------------------- */
 
-/* making the header image the same size as the screen, so it is the background until you scroll */
-			
-			.jumbotron {
-			text-align: center;
-			color: white;
-		}
-		
-			#firstJumbotron {
-				font-family: 'Montserrat', sans-serif;
-				background-image: url('images/background2.jpg');
-				background-size: cover;
-				background-repeat: no-repeat;
-				height: 100vh;
-				padding-top: 9%;
-			}
+/* shared style classes */
 
-			#contactButton {
-				position: absolute;
-				right: 10px;
-				top: 10px;
-				padding: 10px;
-				font-size: 120%;
-				}
-			
-			#contactButton a {
-				font-family: 'Montserrat', sans-serif;
-				color: white;
-				text-decoration: none;
-			}
-			
-			#contactButton a:hover {
-				color: #EC1581;
-			}
+body {
+	font-family: 'Montserrat', sans-serif;
+}
 
-			.link {
-				text-decoration: none;
-				color: #5D50F3;
-			}
+a, a:hover, a:active, a:focus, a:visited {
+	text-decoration: none;
+}
 
-			.link:hover {
-				text-decoration: none;
-				color: #EC1581;
-			}
-				
-			#intro {
-				font-family: 'Montserrat', sans-serif;
-				margin: 50px;
-				padding: 40px;
-				text-align: center;
-				font-size: 20px;
-			}
-			
-			#languages {
-				position: relative;
-				text-align: center;
-				height: 300px;
-			}
+.link {
+	color: #5D50F3;
+}
+
+.link:hover {
+	color: #EC1581;
+}
+
+.fuschiaText {
+	color: #EC1581;
+}
+
+.sectionTitle {
+	font-weight: bolder;
+	padding-bottom: 10%;
+}
+
+.form-control:focus {
+	border-color: #EC1581;
+	box-shadow: 0px 1px 1px rgba(236, 21, 129) inset, 0px 0px 8px rgba(236, 21, 129);
+}
 
 
-			#languagesText {
-				font-family: 'Montserrat', sans-serif;
-				text-align: center;
-				font-size: 20px;
-				line-height: 2;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				width: 45%;
-				height: 10%;
-				margin-top: auto;
-				margin-bottom:auto;
-				margin-left:5%;
-				margin-right: 5%;
-				float: right;
-			}
 
-			#languagesImage {
-				float: right;
-				width: 45%;
-				margin-right: 5%;
-				margin-left: 5%;
-			}
+/* -------------------------------------------------------- */
 
-			#projects {
-				margin-top: 100px;
-				margin-left: 20px;
-				margin-bottom: 200px;
-				padding: 40px;
-				font-family: 'Montserrat', sans-serif;
-				font-weight: bold;
-			}
+/* default body section styling (width < 768px) */
 
-			#projects h3 {
-				margin-top: 50px;
-				margin-bottom: 80px;
-			}
+#main {
+	background-image: url('images/background2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	padding-top: 9%;
+	text-align: center;
+	color: white;
+}
 
-			#projects h5 {
-				margin-top: 10px;
-				margin-bottom: 10px;
-				font-weight: bold;
-				color:#5D50F3;
-			}
+#main h1 {
+	padding: 7%;
+}
 
-			#projects h5:hover {
-				text-decoration: none;
-				color: #EC1581;
-			}
+#contactButton {
+	display: none;
+}
 
-			#projects a:hover {
-				text-decoration: none;
-			}
+#contactButton a {
+	position: absolute;
+	right: 3%;
+	top: 3%;
+	font-size: 120%;
+	color: white;
+}
 
-			/* Three image containers (use 25% for four, and 50% for two, etc) */
-			.column {
-				float: left;
-				width: 33%;
-				padding: 10px;
-			}
+#contactButton a:hover {
+	color: #EC1581;
+	text-decoration: none;
+}
 
-			iframe {
-				width: 100%;
-				height: 80%;
-				padding: 10px;
-			}
-			
-			/* Clear floats after image containers */
-			.row::after {
-				content: "";
-				clear: both;
-				display: table;
-			}
-		
-		form {
-			margin-bottom: 10%;
-			margin-left: 5%;
-		}
-		#successMessage {
-			display:none;
-		}
+.wrapper {
+	width: 100%;
+}
 
-		.header {
-			margin: 10% 5% 0% 5%;
-		} 
-		#contact {
+#intro {
+	text-align: center;
+	font-size: 100%;
+	padding: 10%
+}
 
-			width: 600px;
-			margin: auto;
-		}
-		
-		#home {
-			text-align: center;
-			margin-bottom: 20px;
-		}
-		
-		#secondJumbotron {
-			margin: 0;
-			background-color: black;
-		}
-		#appstore {
-			width: 200px;
-		}
-		
-		#linkedin {
-			width: 105px;
-			position: relative;
-			top: -1px;
-			margin-right: 25px;
-		}
-		#instagram {
-			width: 130px;
-			position: relative;
-			top: 4px;
-		}
-		#github {
-			width: 75px;
-			position: relative;
-			top: 0px;
-			margin-right: 22px;
-			margin-left: 10px;
-		}
-		#facebook {
-			width: 115px;
-			position: relative;
-			top: 0px;
-		}
+#languages {
+	padding-top: 3%;
+}
+
+#languagesText {
+	width: 100%;
+	font-size: 100%;
+	line-height: 1.7;
+	
+}
+
+#languages p {
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+}
+
+#languagesImage {
+	width: 100%;
+	padding-bottom: 10%;
+}
+
+#projects {
+	width: 100%;
+	padding: 7%;
+}
+
+.row {
+	width: 100%;
+}
+
+.column {
+	padding-top: 10%;
+	padding-bottom: 7%;
+}
+
+.column h5 {
+	padding-top: 2%;
+}
+
+.column p {
+	padding-top: 2%;
+}
+
+#contact {
+	width: 90%;
+	margin: auto;
+}
+
+#successMessage {
+	display:none;
+}
+
+#submitButton {
+	color: white;
+	background-color: #5D50F3;
+}
+
+#submitButton:hover {
+	background-color: #EC1581;
+}
+
+#returnToTop {
+	text-align: center;
+	margin: 20px;
+}
+
+#bottomBanner {
+	margin: 0;
+	background-color: black;
+}
+
+
+/* -------------------------------------------------------- */
+
+/* body section styling (width > 768px) */
+@media only screen and (min-width: 768px) {
+
+	#contactButton {
+		display: block;
+	}
+
+}
+
+
+/* -------------------------------------------------------- */
+
+/* social media icons styling (regardless of screen size) */
+
+#bottomBanner {
+	width: 100%;
+	height: 150px;
+}
+
+#bottomBanner p {
+	text-align: center;
+	padding: 25px;
+}
+
+i {
+	padding: 10px;
+	text-align: center;
+	color: darkgray;
+}
+
+i:hover {
+	color: #5D50F3;
+}
+
+.fa {
+  	width: 50px;
+  	text-align: center;
+  	text-decoration: none;
+}
+
+
+
