@@ -77,47 +77,60 @@
 		</div>
 					
 
+	<div id="bio">
+
+		<h3 class="sectionTitle">Bio</h3>
+		<img src="images/headshot.jpg" id="headshot">
+		<div id="bioText">
+
+			<p class="link"><a href="#"></a>Check out my Resume</p>
+			<p>I started my journey with a B.Sc., and completed an 8 month Honours program researching the movement patterns of the Sable Island Horses using MySQL and R Studio. Having never written a line of code in my life, I was hooked after seeing the power that data can have to exact positive change.</p>
+			<p class="link" id="viewMore" onclick="viewMore()">Keep reading...</p>
+			<p class="overflowText" id="overflowText1">I spent a couple of years working in Customer Success, taking in as much as I could about user experience and educational content creation, while learning the fundamentals of software engineering in my free time.</p>
+			<p class="overflowText" id="overflowText2">I strive to create highly effective user interfaces, to ensure that all delivered products are held to a high standard of quality, to write code that is clean and efficient, and to share information in the most useful ways possible.</p>
+			<p class="overflowText" id="overflowText3">Someday I hope to come full circle and apply these principles to wildlife conservation and environmental protection.</p>
+			<p class="link" id="viewLess" onclick="viewLess()">See less...</p>
+
+		</div>
+
+	</div>
+
+	<div id = "contact">
+							
+		<h2 class="sectionTitle">Send me a message!</h2>
+
 	
+		<form>
+			<div id="errorMessage" role="alert"></div>
+			<div id="successMessage" role="alert">Your message has been sent!</div>
 
-		<div id = "contact">
-			
-			<div class="sectionTitle">				
-				<h2 >Send me a message!</h2>
+			<div class="form-group">
+				<label for="exampleFormControlInput1">Email address</label>
+				<input type="email" class="form-control" id="email" placeholder="name@example.com">
 			</div>
-		
-			<form>
-				<div id="errorMessage" role="alert"></div>
-				<div id="successMessage" role="alert">Your message has been sent!</div>
-
-				<div class="form-group">
-					<label for="exampleFormControlInput1">Email address</label>
-					<input type="email" class="form-control" id="email" placeholder="name@example.com">
+			<div class="row">
+				<div class="col">
+					<label>First Name</label>
+					<p><input type="text" class="form-control" id = "firstName"></p>
 				</div>
-				<div class="row">
-					<div class="col">
-						<label>First Name</label>
-						<p><input type="text" class="form-control" id = "firstName"></p>
-					</div>
-					<div class="col">
-						<label>Last Name</label>
-						<p><input type="text" class="form-control" id = "lastName"></p>
-					</div>
+				<div class="col">
+					<label>Last Name</label>
+					<p><input type="text" class="form-control" id = "lastName"></p>
 				</div>
-				<div class="form-group">
-					<label>Subject</label>
-					<input type="text" class="form-control" id="subject"></input>
-				</div>
-				<div class="form-group">
-					<label>Message</label>
-					<textarea class="form-control" id="message" rows="3"></textarea>
-				</div>
-				
-				<button type="button" id="submitButton" class="btn">Send</button>
-				
-			</form>		
-		</div>	
-
-
+			</div>
+			<div class="form-group">
+				<label>Subject</label>
+				<input type="text" class="form-control" id="subject"></input>
+			</div>
+			<div class="form-group">
+				<label>Message</label>
+				<textarea class="form-control" id="message" rows="3"></textarea>
+			</div>
+			
+			<button type="button" id="submitButton" class="btn">Send</button>
+			
+		</form>		
+	</div>	
 			
 			
 	<div id="returnToTop">
@@ -126,10 +139,10 @@
 
 	<div id = "bottomBanner">
 		<p>
-			<a href="#"><i class="fab fa-github-square fa-3x"></i></a>
-			<a href="#"><i class="fab fa-linkedin fa-3x"></i></a>
-			<a href="#"><i class="fab fa-facebook-square fa-3x"></i></a>
-			<a href="#"><i class="fab fa-instagram fa-3x"></i></a>
+			<a href="https://github.com/AndyDupuis" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square fa-3x"></i></a>
+			<a href="https://www.linkedin.com/in/andrew-dupuis-1488631b5/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fa-3x"></i></a>
+			<a href="https://www.facebook.com/andy.dupuis.98/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square fa-3x"></i></a>
+			<a href="https://www.instagram.com/andy_dupuis/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram fa-3x"></i></a>
 		</p>
 	</div>
 			

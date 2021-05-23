@@ -25,7 +25,7 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .sectionTitle {
 	font-weight: bolder;
-	padding-bottom: 10%;
+	padding-bottom: 10px;
 }
 
 .form-control:focus {
@@ -124,13 +124,39 @@ a, a:hover, a:active, a:focus, a:visited {
 	padding-top: 2%;
 }
 
+#headshot {
+	display: none;
+}
+
+#bio {
+	margin-bottom: 20px;
+}
+
+#bio .sectionTitle {
+	padding: 20px;
+}
+
+#bioText {
+	padding: 20px;
+}
+
+.overflowText {
+	display: none;
+}
+
+#viewLess {
+	display: none;
+}
+
+
 #contact {
 	width: 90%;
 	margin: auto;
+	margin-bottom: 30px;
 }
 
 #successMessage {
-	display:none;
+	display: none;
 }
 
 #submitButton {
@@ -161,6 +187,25 @@ a, a:hover, a:active, a:focus, a:visited {
 	#contactButton {
 		display: block;
 	}
+
+	#headshot {
+		display: inline-block;
+		width: 30%;
+		max-height: 400px;
+		max-width: 300px;
+		margin-bottom: 10%;
+	}
+
+	#bioText {
+		width: 50%;
+		float: left;
+	}
+
+	#bio {
+		clear: both;
+	}
+
+
 
 }
 
