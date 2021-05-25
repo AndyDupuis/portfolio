@@ -1,33 +1,49 @@
 <?php
 
+$errors = [];
+$errorMessage = '';
 
-	$message = '';
-
-	if (empty($_POST['email']) || empty($_POST['firstName']) || empty($_POST['lastName']) || empty($_POST['subject']) || empty($_POST['message'])) {
-		die('Please ensure all fields are filled out.');
-	}
-
-	$message .= 
-		Email: {$_POST['email']}
-		First Name: {$_POST['firstName']}
-		Last Name: {$_POST['lastName']}
-		Subject: {$_POST['subject']}
-		Message: {$_POST['message']}
+if (!empty($_POST)) {
+    $firstName = $_POST['firstName'];
+	$lastName = $_POST['lastName']
+    $email = $_POST['email'];
+	$subject = $_POST['subject']
+    $message = $_POST['message'];
 	
 
-	$to = 'andy.dupuis95@gmail.com';
-	$subject = 'You have been contacted!';
-	$from = 'andydupuis.com';
-	$fromEmail = 'yoursite@andydupuis.com'
+    if (empty($name)) {
+        $errors[] = 'Name is empty';
+    }
 
-	$header = 'From: ' . $from. '<' . $fromEmail .. '>';
+    if (empty($email)) {
+        $errors[] = 'Email is empty';
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Email is invalid';
+    }
 
-	if(!mail($to, $subject, $message, $header)) {
-		die('Error sending email.');
-	} else {
-		die('Email sent!');
-	}
+    if (empty($message)) {
+        $errors[] = 'Message is empty';
+    }
 
+
+    if (empty($errors)) {
+        $toEmail = 'andy.dupuis95@gmail.com';
+        $emailSubject = 'New email from your contant form';
+        $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
+
+        $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
+        $body = join(PHP_EOL, $bodyParagraphs);
+
+        if (mail($toEmail, $emailSubject, $body, $headers)) {
+            header('Location: thank-you.html');
+        } else {
+            $errorMessage = 'Oops, something went wrong. Please try again later';
+        }
+    } else {
+        $allErrors = join('<br/>', $errors);
+        $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
+    }
+}
 
 
 ?>
