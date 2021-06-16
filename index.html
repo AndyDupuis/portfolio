@@ -26,7 +26,7 @@
 		<div id="main" class="background">
 
 				<h1>Hi, I'm Andy.</h1>
-				<div id="contactButton"><a href="#contact">Contact</a></div>
+				<div id="contactButton"><a href="#bio">Contact</a></div>
 
 		</div>
 
@@ -91,7 +91,7 @@
 		<img src="images/headshot.jpg" id="headshot">
 		<div id="bioText">
 
-			<p class="link"><a href="#"></a>Check out my Resume</p>
+			<p class="link"><a href="/Users/andrewdupuis/Documents/development/my_repos/portfolio/resume.pdf " target="_blank" rel="noopener noreferrer" class="link">Check out my Resume</a></p>
 			<p>I started my journey with a B.Sc., and completed an 8 month Honours program researching the movement patterns of the Sable Island Horses using MySQL and R Studio. Having never written a line of code in my life, I was hooked after seeing the power that data can have to exact positive change.</p>
 			<p class="link" id="viewMore" onclick="viewMore()">Keep reading...</p>
 			<p class="overflowText" id="overflowText1">I spent a couple of years working in Customer Success, taking in as much as I could about user experience and educational content creation, while learning the fundamentals of software engineering in my free time.</p>
@@ -102,44 +102,6 @@
 		</div>
 
 	</div>
-
-	<div id = "contact">
-							
-		<h2 class="sectionTitle">Send me a message!</h2>
-
-	
-		<form action="contactform.php" method="post" id="contact-form">
-			<div id="errorMessage" role="alert"></div>
-			<div id="successMessage" role="alert">Your message has been sent!</div>
-			<?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
-
-			<div class="form-group">
-				<label for="exampleFormControlInput1">Email address</label>
-				<input name="email" type="email" class="form-control" id="email" placeholder="name@example.com">
-			</div>
-			<div class="row">
-				<div class="col">
-					<label>First Name</label>
-					<p><input name="firstName" type="text" class="form-control" id = "firstName"></p>
-				</div>
-				<div class="col">
-					<label>Last Name</label>
-					<p><input name="lastName" type="text" class="form-control" id = "lastName"></p>
-				</div>
-			</div>
-			<div class="form-group">
-				<label>Subject</label>
-				<input name="subject" type="text" class="form-control" id="subject"></input>
-			</div>
-			<div class="form-group">
-				<label>Message</label>
-				<textarea name="message" class="form-control" id="message" rows="3"></textarea>
-			</div>
-			
-			<button type="submit" id="submitButton" class="btn">Send</button>
-			
-		</form>		
-	</div>	
 			
 			
 	<div id="returnToTop">
