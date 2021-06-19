@@ -159,6 +159,7 @@ a, a:hover, a:active, a:focus, a:visited {
 	padding: 20px;
 }
 
+
 .overflowText {
 	display: none;
 }
@@ -166,7 +167,6 @@ a, a:hover, a:active, a:focus, a:visited {
 #viewLess {
 	display: none;
 }
-
 
 #contact {
 	width: 90%;
@@ -338,17 +338,17 @@ a, a:hover, a:active, a:focus, a:visited {
 	padding: 25px;
 }
 
-i {
+#bottomBanner i {
 	padding: 10px;
 	text-align: center;
 	color: darkgray;
 }
 
-i:hover {
+#bottomBanner i:hover {
 	color: #5D50F3;
 }
 
-.fa {
+#bottomBanner .fa {
   	width: 50px;
   	text-align: center;
   	text-decoration: none;
