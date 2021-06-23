@@ -25,7 +25,7 @@ a, a:hover, a:active, a:focus, a:visited {
 
 .sectionTitle {
 	font-weight: bolder;
-	padding-bottom: 10px;
+	padding-top: 30px;
 }
 
 .form-control:focus {
