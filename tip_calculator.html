@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practice</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <style>
+
+        body {
+            background-image: linear-gradient(to right, lightseagreen, slateblue);
+        }
+
+        #app {
+            background-color: gainsboro;
+            border-radius: 30px;
+            height: 550px;
+            width: 350px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 10px;
+        }
+
+        #title {
+            font-family: 'Roboto Mono', monospace;
+            color: #2C6898;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            font-family: 'Roboto Mono', monospace;
+            color: black;
+            font-size: 80%;
+            margin: 20px;
+        }
+        
+        select {
+            margin-left: 20px;
+        }
+
+        input {
+            margin-left: 20px;
+        }
+
+        button {
+            background-color: skyblue;
+            border-color: skyblue;
+            border-radius: 7px;
+            width: 110px;
+            height: 40px;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: bold;
+        }
+
+        #errorMessage {
+            margin-top: 50px;
+            color: darkred;
+            text-align: center;
+        }
+
+        #people {
+            margin-bottom: 40px;
+        }
+
+        #app div {
+            margin-left: 32%;
+        }
+
+        #result {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 200%
+        }
+        
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="app">
+
+        <p id="title">Tip Calculator</p>
+
+        <p id="errorMessage"></p>
+
+        <p>How much was your bill?</p>
+        <p>$ <input id="bill"></p>
+
+        <p>How was your service?</p>
+        <select id="tipPercentage">
+            <option value="">Choose one...</option>
+            <option value=0.25>Awesome (25%)</option>
+            <option value=0.20>Great (20%)</option>
+            <option value=0.15>Good (15%)</option>
+            <option value=0.10>Okay (10%)</option>
+            <option value=0.05>Poor (5%)</option>
+            <option value=0>Terrible (0%)</option>
+        </select>
+
+        <p>How many people are sharing the bill?</p>
+        <input id="people" placeholder="Number of People">
+
+        <div id="button"><button onclick="calculateTip()">Calculate!</button></div>
+
+        <p id="result"></p>
+
+
+    </div>
+
+    <script>
+
+        
+
+        function calculateTip() {
+            
+            var bill = document.getElementById("bill").value;
+            var tipPercentage = document.getElementById("tipPercentage").value;
+            var people = document.getElementById("people").value;
+
+            function calculation() {
+                document.getElementById("errorMessage").innerHTML = "";
+                tip = "$" + ((bill * tipPercentage) / people).toFixed(2);
+                document.getElementById("result").innerHTML = tip;
+            }
+            
+            function emptyFieldsError() {
+                document.getElementById("errorMessage").innerHTML = "Please fill in all fields";
+            }
+
+            function nonNumericalFieldsError() {
+                document.getElementById("errorMessage").innerHTML = "Please enter numbers only";
+            }
+
+
+            if (bill != "" && isNaN(bill) == false && tipPercentage != "" && isNaN(tipPercentage) == false && people != "" && isNaN(people) == false) {
+                calculation();
+            } else if (bill == "" || tipPercentage == "" || people == ""){
+                emptyFieldsError();
+            } else if (isNaN(bill) == true || isNaN(tipPercentage) == true || isNan(people) == true) {
+                nonNumericalFieldsError();
+            } else {
+                alert("Something went wrong. Please refresh the page and try again.")
+            }
+            
+        }
+
+    </script>
+
+    
+</body>
+</html>

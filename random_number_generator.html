@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+<style>
+
+    body {
+        background-image: linear-gradient(to right, lightseagreen, slateblue);
+    }
+
+    #app {
+            background-color: gainsboro;
+            border-radius: 30px;
+            height: 400px;
+            width: 350px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 10px;
+        }
+
+        #title {
+            font-family: 'Roboto Mono', monospace;
+            color: #2C6898;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            font-family: 'Roboto Mono', monospace;
+            color: black;
+            font-size: 80%;
+            margin: 20px;
+        }
+        
+        input {
+            margin-left: 20px;
+        }
+
+        button {
+            background-color: skyblue;
+            border-color: skyblue;
+            border-radius: 7px;
+            width: 110px;
+            height: 40px;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #errorMessage {
+            margin-top: 50px;
+            color: darkred;
+        }
+
+        #people {
+            margin-bottom: 40px;
+        }
+
+        #app div {
+            margin-left: 32%;
+        }
+
+        #resultSection {
+            margin: auto;
+            margin-top: 50px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #resultTitle {
+            font-family: 'Roboto Mono', monospace;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #result li {
+            font-family: 'Roboto Mono', monospace;
+            color: black;
+            font-size: 80%;
+            margin: 20px;
+            list-style-type: none;
+        }
+
+        
+
+    
+
+
+
+</style>
+
+
+</head>
+<body>
+
+    <div id = "app">
+        <p class="title">Random Number Generator</p>
+
+        <p id="errorMessage"></p>
+
+        <p>Generate whole numbers up to:</p>
+        <p><input id="max"></p>
+    
+        <p>How many numbers would you like to generate?</p>
+        <p><input id="count"></p>
+
+        <div id="button"><button onclick="generateRandomNumbers()">Calculate!</button></div>
+
+    </div>
+
+    <div id="resultSection">
+
+        <p class="title">Result:</p>
+        <ul id="result"></ul>
+
+    </div>
+
+       
+
+
+    </div>
+
+    <script>
+
+        function generateRandomNumbers() {
+
+            var max = document.getElementById("max").value;
+            var count = document.getElementById("count").value;
+            var text;
+
+            function emptyFieldsError() {
+                document.getElementById("errorMessage").innerHTML = "Please fill in all fields";
+            }
+
+            function nonNumericalFieldsError() {
+                document.getElementById("errorMessage").innerHTML = "Please enter numbers only";
+            }
+            
+            function calculation() {
+
+                document.getElementById("errorMessage").innerHTML = "";
+                document.getElementById("result").innerHTML = "";
+                
+                result = "<ul>"
+
+                for (let i=0; i < count; i++) {
+                    result +="<li>" + Math.round(Math.random()*max) + "</li>";
+                }
+
+                result += "</ul>";
+                
+                
+                document.getElementById("result").innerHTML = result;
+                
+
+            }
+
+
+            if (max != "" && isNaN(max) == false && count != "" && isNaN(count) == false) {
+                calculation();
+            } else if (max == "" || count == "") {
+                emptyFieldsError();
+            } else if (isNaN(max) == true || isNaN(count) == true) {
+                nonNumericalFieldsError();
+            } else {
+                alert("Something went wrong. Please refresh the page and try again.")
+            }
+
+            
+
+        }
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
