@@ -5,7 +5,7 @@
 
 A portfolio webpage to tell you a bit about me, work experience, languages/frameworks, projects, and career directions. 
 
-[Currently published here](http://andydupuis.com/)
+[Currently published here](https://andydupuis.github.io/portfolio/)
 
 ### Features
 
