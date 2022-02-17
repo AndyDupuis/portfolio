@@ -12,17 +12,14 @@ A portfolio webpage to tell you a bit about me, work experience, languages/frame
 ```markdown
 
 # Current: 
-- very basic resume style portfolio
+- basic portfolio
+- a little outdated
 
 
-# In Progress for MVP: 
-- responsive
-- mobile friendly
-- link to projects
-- clear and concise
-
-# Future Enhancement Ideas: 
-- brainstorming some fun and unique UI ideas
+# Next Steps: 
+- redesign
+- fix a few bugs on mobile views
+- add latest projects
 
 ```
 
