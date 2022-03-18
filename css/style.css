@@ -96,6 +96,13 @@ i:hover {
   	text-decoration: none;
 }
 
+/* Footer */
+#footer {
+    background-color: darkgrey;
+    text-align: center;
+    padding: 3%;
+}
+
 
 /* -------------------------------------------------------- */
 /* SCREEN SIZE SPECIFIC */
@@ -135,6 +142,11 @@ i:hover {
     }
     #contact i {
         padding: 3%;
+    }
+
+    /* Don't display footer on small screens where contact becomes footer */
+    #footer {
+        display: none;
     }
     
 }
