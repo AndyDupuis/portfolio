@@ -1,0 +1,236 @@
+body {
+    height: 100vh; 
+    width: 100vw;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* -------------------------------------------------------- */
+/* STYLES REGARDLESS OF SCREEN SIZE*/
+
+/* Shared Styles */
+a, .link {
+    text-decoration: none;
+    color: #0056D3;
+}
+a:hover, .link:hover {
+    color: #13D300;
+}
+.centered_text {
+    text-align: center;
+}
+
+/* Add some padding around content sections */
+.container {
+    padding: 3%;
+}
+
+/* Landing Page */
+#landing {
+    background-image: url('../img/landing_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 3%;
+}
+#landing h1 {
+    color: darkgray;
+    text-align: center;
+}
+
+/* Don't show overflow text or minimize link by default */
+.overflowText {
+    display: none;
+}
+#viewLess {
+    display: none;
+}
+
+/* Skills Section */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 3%;
+    gap: 5%;
+    margin: auto;
+}
+.grid-item {
+    background-color: #a4ea9d;
+    border: 2px solid #0056D3;
+    border-radius: 15px;
+    padding: 3%;
+}
+
+/* About Me section default */
+#bio {
+    display: inline-block;
+    clear: both;
+}
+#bio img {
+    padding: 0;
+    margin-left: 10%;
+    border-radius: 15px;
+}
+#me {
+    width: 30%;
+    padding-left: 10%;
+}
+#bioText {
+    width: 50%;
+    float: left;
+}
+
+/* Contact Icon/Links (side or bottom fixed) */
+#contact p {
+	text-align: center;
+}
+i {
+	color: darkgray;
+}
+i:hover {
+	color: #0056D3;
+}
+.fa {
+  	width: 50px;
+  	text-align: center;
+  	text-decoration: none;
+}
+
+
+/* -------------------------------------------------------- */
+/* SCREEN SIZE SPECIFIC */
+
+/* Extremely small screen devices (600px width and below) */
+@media screen and (max-width: 600px) {
+
+    /* Adjust landing page text size */
+    #landing h1 {
+        font-size: 150%;
+        padding-left: 2%;
+    }
+
+    /* Make Skills Section have 2 columns*/
+    .grid-container {
+        grid-template-columns: auto;
+        gap: 1%;
+    }
+
+    /* Profile picture should not appear when screen width <900px */
+    #me {
+        display: none;
+    }
+    #bioText {
+        width: 100%;
+    }
+    #bio {
+        margin-top: 20%;
+    }
+
+    /* Fix contact section to bottom instead of side to save space */
+    #contact {
+        margin: 0;
+        background-color: black;
+        width: 100%;
+        
+    }
+    #contact i {
+        padding: 3%;
+    }
+    
+}
+
+/* Small screen devices (600px width and above) */
+@media screen and (min-width: 600px) {
+
+    /* Adjust landing page text size */
+    #landing h1 {
+        font-size: 200%;
+    }
+
+    /* Make Skills Section have 2 columns*/
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+
+    /* Profile picture should not appear when screen width <900px */
+    #me {
+        display: none;
+    }
+    #bioText {
+        width: 100%;
+    }
+    #bio {
+        margin-top: 10%;
+    }
+
+    /* Fix contact section to left side on screens >600px wide */
+    .side-bar {
+        width: 10%;
+        top: 0;
+        bottom: 0;
+        position: fixed;
+        border: 2px solid black;
+        background-color: black;
+        padding-top: 8%;
+    }
+    .main {
+        width: 90%;
+        margin-left: 10%;
+    }
+    #contact i {
+        padding: 15%;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+
+    /* Make Skills Section have 2 columns*/
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+
+    /* Profile picture should appear when screen width >900px */
+    #me {
+        display: inline-block;
+    }
+    #bioText {
+        width: 50%;
+    }
+    #bio {
+        margin-top: 10%;
+    }
+
+}
+
+/* Very large screen devices (>1200px width) */
+@media screen and (min-width: 1200px) {
+
+    /* Adjust landing page text size */
+    #landing h1 {
+        font-size: 250%;
+    }
+
+    /* Make Skills Section have 3 columns*/
+    .grid-container {
+        grid-template-columns: auto auto auto;
+    }
+    
+    /* Adjust margin above bio section */
+    #bio {
+        margin-top: 0;
+    }
+
+    /* Keep contact icons in the view */
+    .side-bar {
+        padding-top: 5%;
+    }
+
+    /* Keep contact icons in a single stack */
+    #contact i {
+        padding-top: 3%;
+        padding-left: 17%;
+        padding-right: 17%;
+    }
+
+}

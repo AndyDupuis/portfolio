@@ -1,148 +1,149 @@
 <!DOCTYPE html>
 <html>
 
+    <head>
 
-	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">	
-		
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="style.css">
-		
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka&family=PT+Sans&family=Quicksand:wght@300;400&family=Roboto+Mono&display=swap" rel="stylesheet">
 
-		<title>Andy Dupuis</title>		
-			
-		
-	</head>
-	
-	
-	<body>
-	
-	
-		<div id="main" class="background">
+        <!-- Font Awesome icons for use in footer -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> 
 
-				<h1>Hi, I'm Andy.</h1>
-				<div id="contactButton"><a href="#bio">Contact</a></div>
+        <!-- Custom Stylesheet -->
+        <link rel="stylesheet" href="css/style.css">
+        
 
-		</div>
+        <title>Andy Dupuis</title>
 
-		
-		<div id="intro">
+    </head>
 
-				<p>I am currently a Software QA Specialist at <a class="link" href="https://www.bluelightanalytics.com" target="_blank" rel="noopener noreferrer">Bluelight Analytics</a>, a dental technology start-up in the beautiful city of Halifax, Nova Scotia.</p>
-				<p>I enjoy solving problems in creative ways.</p>
+    <body>
 
-		</div>
+        <div class="main">
+
+            <div id="landing">
+
+                <h1>Hi, I'm Andy.</h1>
+    
+            </div>
+
+            <div class="container centered_text">
+                <p>I am a software quality assurance specialist with the skillset and desire to transition to software development.</p>
+                <p>As of early June 2022 I will also have completed an Advanced Graduate Certificate in Remote Sensing, with the experience required to work in the GIS and Geospatial Science fields.</p>
+                <br>
+                <p>I'm ready to start the next chapter of my career :D</p>
+            </div>
+    
+            <div class="container" id="skills">
+
+                <h2>My Skills</h2>
+
+                <div class="grid-container">
+
+                    <div class="grid-item">
+                        <h3>Front-end Development</h3>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3 & Bootstrap</li>
+                            <li>JavaScript & JQuery</li>
+                            <li>Responsive web design</li>
+                            <li>UX-centered design</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-item">
+                        <h3>Back-end Development & Data</h3>
+                        <ul>
+                            <li>Automation using Python</li>
+                            <li>GraphQL API development</li>
+                            <li>MySQL and database management</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-item">
+                        <h3>Remote Sensing</h3>
+                        <ul>
+                            <li>Foundations in GIS</li>
+                            <li>Processing LiDAR data</li>
+                            <li>Satellite imagery analysis</li>
+                            <li>Processing aerial photography</li>
+                            <li>Aerial triangulation</li>
+                            <li>Photogrammetry</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-item">
+                        <h3>Software QA</h3>
+                        <ul>
+                            <li>Jest using TypeScript</li>
+                            <li>Pytest for Python testing</li>
+                            <li>Manual testing and documentation</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-item">
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Self-motivated</li>
+                            <li>Quick learner</li>
+                            <li>Effective communicator</li>
+                            <li>Team player</li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-item">
+                        <h3>Other</h3>
+                        <ul>
+                            <li>Agile Methodology</li>
+                            <li>Git and source control</li>
+                            <li>Test-driven development</li>
+                            <li>GitLab and Jira experience</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container" id="bio">
+
+                <h2 class="sectionTitle">About Me</h2>
+                <img src="img/me.jpg" id="me">
+                <div id="bioText">
+                    
+                    <p id="resumeLink"><a href="https://drive.google.com/file/d/1bDZ_7iU7azaN66qSaL0xJd7I9oWDVaBJ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="link">Check out my Resume</a></p>
+                    <p>I am currently seeking full-time employment for June 2022 and am open to any of the following areas: Geospatial Science / GIS / Remote Sensing, Software Development, or Software Quality Assurance.</p>
+                    <p class="link" id="viewMore" onclick="viewMore()">Keep reading...</p>
+                    <p class="overflowText" id="overflowText1">While completing a Bachelor of Science degree in Biology at Saint Mary's University, I became increasingly interested in protecting our planet and its natural resources. Towards the end of my degree I focused on wildlife population studies, mainly though positional data and DNA analysis / population genetics, but decided that this wasn't quite the right fit for me long-term.</p>
+                    <p class="overflowText" id="overflowText2">Working at the local technology start-up Bluelight Analytics I was able to explore a variety of directions, and build skills in user experience, scientific content creation, tech support, database querying, quality assurance, and software development.</p>
+                    <p class="overflowText" id="overflowText3">This path led me to the Remote Sensing Graduate Certificate program at NSCC's Centre of Geographic Sciences where I have gained theoretical and hands-on experience in GIS, imagery analysis including aerial triangulation and photogrammetry, 3D data processing such as LiDAR point clouds, automating workflows using Python, and database management, among others.</p>
+                    <p class="link" id="viewLess" onclick="viewLess()">See less...</p>
+        
+                </div>
+        
+            </div>
 
 
-		<div id="languages" class="wrapper">
 
-			<img id="languagesImage" class="" src="images/languages.png" alt="graph of language proficiency"width="200">
-			<div id="languagesText">
-				<p>So far my language of choice for front-end development has been <span class="fuschiaText">JavaScript</span>. For back-end API development I've used <span class="fuschiaText">NodeJS</span>, <span class="fuschiaText">Typescript</span>, as well as <span class="fuschiaText">GraphQL</span>.</p>
-				<p>I've used <span class="fuschiaText">Python</span> for automating work flows where a significant amount of math and data analysis is required, and have enjoyed experimenting with <span class="fuschiaText">Dart</span> and <span class="fuschiaText">Flutter</span> for mobile and web applications.</p>
-			</div>
+        </div>
 
-		</div>
+        <div id="contact" class="side-bar">
+            <p>
+                <a href="mailto:andy.dupuis95@gmail.com"><i class="fas fa-envelope fa-3x"></i></a>
+                <a href="tel:19028300601"><i class="fas fa-phone-square fa-3x"></i></a>
+                <a href="https://github.com/AndyDupuis" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square fa-3x"></i></a>
+                <a href="https://www.linkedin.com/in/andy-dupuis-1488631b5/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fa-3x"></i></a>
+                <a href="https://www.facebook.com/andy.dupuis.98/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square fa-3x"></i></a>
+                <a href="https://www.instagram.com/andy_dupuis/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram fa-3x"></i></a>
+            </p>
+        </div>
 
+        <script src="js/app.js"></script>
 
+    </body>
 
-		<div id="projects" class="wrapper">
-
-			<h3 class="sectionTitle">Web Development Projects</h3>
-
-			<div class="row">
-				<div class="column">
-					<div class="iframeContainer">
-						<iframe src="https://www.youtube.com/embed/OvyUMFHW_8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="responsiveIframe"></iframe>
-					</div>
-					<a href="https://baking-help.com/" target="_blank" rel="noopener noreferrer" class="link"><h5>Measurement Converter</h5></a>
-					<p>A JS web app that converts baking measurements to/from commonly used units. It differentiates between wet and dry ingredients for the most accurate results possible.</p>
-				</div>
-				<div class="column">
-					<div class="iframeContainer">
-						<iframe src="https://www.youtube.com/embed/laMmsdjkolE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="responsiveIframe"></iframe>
-					</div>
-					<a href="https://andydupuis.github.io/fitnesstrack/" target="_blank" rel="noopener noreferrer" class="link"><h5>Fitness Tracker</h5></a>
-					<p>The beginnings of a web app to track progress towards fitness goals through logging food and workouts. When completed this will also provide nutritional information and custom workout plans.</p>
-				</div>
-				<div class="column">
-					<div class="iframeContainer">
-						<iframe src="https://www.youtube.com/embed/ucD0irrFrSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="responsiveIframe"></iframe>
-					</div>
-					<a href="https://andydupuis.github.io/j_and_a_attic_remediation/" target="_blank" rel="noopener noreferrer" class="link"><h5>J&A Attic Remediation</h5></a>
-					<p>A business site currently in development, created for a local masonry and attic remediation company. This website includes custom contact forms, as well as some Bootstrap 4 components.</p>
-				</div>				
-			</div>
-
-			<h3 class="sectionTitle">Simple Coding Projects</h3>
-
-			<div class="row">
-				<div class="column">
-					<a href="random_number_generator.html" target="_blank" rel="noopener noreferrer" class="link"><h5>Random Number Generator</h5></a>
-					<p>A simple JS web app that generates a set of n numbers, up to a set value.</p>
-				</div>
-				<div class="column">
-					<a href="tip_calculator.html" target="_blank" rel="noopener noreferrer" class="link"><h5>Tip Calculator</h5></a>
-					<p>A simple JS web app that calculates your tip for you based on your bill total, how good the service was, and how many people are splitting the bill.</p>
-				</div>
-				<div class="column">
-					<a href="" target="_blank" rel="noopener noreferrer" class="link"><h5></h5></a>
-					<p></p>
-				</div>				
-			</div>
-
-			
-		</div>
-					
-		
-	<div id="bio">
-
-		<h2 class="sectionTitle">Bio</h2>
-		<img src="images/headshot.jpg" id="headshot">
-		<div id="bioText">
-			
-			<p class="link" id="resumeLink"><a href="https://docs.google.com/document/d/1eTF1Nkhbc4cGYG-zWfd144bB7R2Mr7Iz9i2XEDcnQag/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="link">Check out my Resume</a></p>
-			<p>I started my journey with a B.Sc., and completed an 8 month Honours program researching the movement patterns of the Sable Island Horses using MySQL and R Studio. Having never written a line of code in my life, I was hooked after seeing the power that data can have to exact positive change.</p>
-			<p class="link" id="viewMore" onclick="viewMore()">Keep reading...</p>
-			<p class="overflowText" id="overflowText1">I spent a couple of years working in Customer Success, taking in as much as I could about user experience and educational content creation, while learning the fundamentals of software engineering in my free time.</p>
-			<p class="overflowText" id="overflowText2">I strive to create highly effective user interfaces, to ensure that all delivered products are held to a high standard of quality, to write code that is clean and efficient, and to share information in the most useful ways possible.</p>
-			<p class="overflowText" id="overflowText3">Someday I hope to come full circle and apply these principles to wildlife conservation and environmental protection.</p>
-			<p class="link" id="viewLess" onclick="viewLess()">See less...</p>
-
-		</div>
-
-	</div>
-			
-			
-	<div id="returnToTop">
-		<a href="#" class="link">Return to top</a>
-	</div>	
-
-	<div id = "bottomBanner">
-		<p>
-			<a href="mailto:andy.dupuis95@gmail.com"><i class="fas fa-envelope fa-3x"></i></a>
-			<a href="tel:19024401155"><i class="fas fa-phone-square fa-3x"></i></a>
-			<a href="https://github.com/AndyDupuis" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square fa-3x"></i></a>
-			<a href="https://www.linkedin.com/in/andrew-dupuis-1488631b5/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fa-3x"></i></a>
-			<a href="https://www.facebook.com/andy.dupuis.98/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square fa-3x"></i></a>
-			<a href="https://www.instagram.com/andy_dupuis/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram fa-3x"></i></a>
-		</p>
-	</div>
-			
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<script src="app.js"></script>
-		
-	</body>
-	
-	
 </html>
-
-
-
