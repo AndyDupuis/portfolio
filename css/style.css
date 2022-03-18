@@ -55,8 +55,8 @@ a:hover, .link:hover {
     margin: auto;
 }
 .grid-item {
-    background-color: #a4ea9d;
-    border: 2px solid #0056D3;
+    background-color: lightgrey;
+    border: 2px solid black;
     border-radius: 15px;
     padding: 3%;
 }
