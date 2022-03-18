@@ -25,6 +25,17 @@ a:hover, .link:hover {
     padding: 3%;
 }
 
+/* Grid used in a couple of places */
+.grid-container {
+    display: grid;
+    padding: 3%;
+    gap: 5%;
+    margin: auto;
+}
+.grid-item {
+    border-radius: 15px;
+}
+
 /* Landing Page */
 #landing {
     background-image: url('../img/landing_background.jpg');
@@ -47,17 +58,9 @@ a:hover, .link:hover {
 }
 
 /* Skills Section */
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 3%;
-    gap: 5%;
-    margin: auto;
-}
-.grid-item {
+#skills .grid-item {
     background-color: lightgrey;
     border: 2px solid black;
-    border-radius: 15px;
     padding: 3%;
 }
 
@@ -78,6 +81,19 @@ a:hover, .link:hover {
 #bioText {
     width: 50%;
     float: left;
+}
+
+/* Outside of Work Section */
+#outside_work .grid-item {
+    border: 1px solid black;
+}
+#outside_work img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+#outside_work h3 {
+    padding: 3%;
+    text-align: center;
 }
 
 /* Contact Icon/Links (side or bottom fixed) */
@@ -117,7 +133,7 @@ i:hover {
     }
 
     /* Make Skills Section have 2 columns*/
-    .grid-container {
+    #skills .grid-container {
         grid-template-columns: auto;
         gap: 1%;
     }
@@ -133,9 +149,15 @@ i:hover {
         margin-top: 20%;
     }
 
+    /* Make Outside of Work Section have 1 column */
+    #outside_work .grid-container {
+        grid-template-columns: auto;
+    }
+
     /* Fix contact section to bottom instead of side to save space */
     #contact {
         margin: 0;
+        margin-top: 30%;
         background-color: black;
         width: 100%;
         
@@ -160,7 +182,7 @@ i:hover {
     }
 
     /* Make Skills Section have 2 columns*/
-    .grid-container {
+    #skills .grid-container {
         grid-template-columns: auto auto;
     }
 
@@ -173,6 +195,14 @@ i:hover {
     }
     #bio {
         margin-top: 10%;
+    }
+
+    /* Make Outside of Work Section have 1 column */
+    #outside_work .grid-container {
+        grid-template-columns: auto;
+    }
+    #footer {
+        margin-top: 20%;
     }
 
     /* Fix contact section to left side on screens >600px wide */
@@ -198,7 +228,7 @@ i:hover {
 @media screen and (min-width: 900px) {
 
     /* Make Skills Section have 2 columns*/
-    .grid-container {
+    #skills .grid-container {
         grid-template-columns: auto auto;
     }
 
@@ -213,6 +243,14 @@ i:hover {
         margin-top: 10%;
     }
 
+    /* Make Outside of Work Section have 3 columns*/
+    #outside_work .grid-container {
+        grid-template-columns: auto auto auto;
+    }
+    #footer {
+        margin-top: 0;
+    }
+
 }
 
 /* Very large screen devices (>1200px width) */
@@ -224,7 +262,7 @@ i:hover {
     }
 
     /* Make Skills Section have 3 columns*/
-    .grid-container {
+    #skills .grid-container {
         grid-template-columns: auto auto auto;
     }
     
@@ -232,6 +270,15 @@ i:hover {
     #bio {
         margin-top: 0;
     }
+
+    /* Make Outside of Work Section have 3 columns*/
+    #outside_work .grid-container {
+        grid-template-columns: auto auto auto;
+    }
+    #footer {
+        margin-top: 0;
+    }
+
 
     /* Keep contact icons in the view */
     .side-bar {
