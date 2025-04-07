@@ -11,7 +11,11 @@
 
         <!-- Custom Stylesheet -->
         <link rel="stylesheet" href="css/style.css">
-        
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
         <title>Andy Dupuis</title>
 
@@ -23,97 +27,81 @@
 
             <div id="landing">
 
-                <h1>Hi, I'm Andy.</h1>
-    
+                <h2>Hello, my name is Andy.</h2>
+                <h2>I'm an automation developer in Nova Scotia.</h2>
             </div>
 
-            <div class="container centered_text">
-                <p>I am an automation developer and customer success specialist in Halifax, Nova Scotia.</p>
-                <p>I am currently employed full-time at Bluelight Analytics, but still pursue interesting side projects.</p>
-            </div>
-    
-            <div class="container" id="skills">
+            
+            <div class="container centered_text" id="bio">
 
-                <h2>My Skills</h2>
-
-                <div class="grid-container">
-
-                    <div class="grid-item">
-                        <h3>QA / Development</h3>
-                        <ul>
-                            <li>Automation using Python</li>
-                            <li>API development</li>
-                            <li>Selenium, Gherkin and behave</li>
-                            <li>MySQL and database management</li>
-                            <li>R and RStudio</li>
-                            <li>Git and source control</li>
-                        </ul>
-                    </div>
-
-                    <div class="grid-item">
-                        <h3>Customer Success</h3>
-                        <ul>
-                            <li>Educational content creation</li>
-                            <li>Live training sessions</li>
-                            <li>Technical support through remote-connect</li>
-                            <li>User engagement initiatives</li>
-                            <li>Data reporting</li>
-                            <li>Documenting feature requests and bugs</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="container" id="bio">
-
-                <h2>About Me</h2>
+                <h2 class="hr-lines">About Me</h2>
                 <img src="img/me_and_rocco.jpg" id="me">
                 <div id="bioText">
                     
-                    <p id="resumeLink"><a href="https://drive.google.com/file/d/1aR7xRFX6va6aStTTmdCgvg4cVnvCKv2D/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="link">Check out my Resume</a></p>
-                    <p>I first completed a Bachelor of Science degree in Biology at Saint Mary's University. Toward the end of my degree I focused on wildlife population studies, mainly though positional data and DNA analysis / population genetics.</p>
+                    <h4 id="resumeLink"><a href="https://drive.google.com/file/d/1aR7xRFX6va6aStTTmdCgvg4cVnvCKv2D/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="link">Open My Resume ↗▯</a></h4>
+                    <p>I am a test automation developer (mostly), with a strong background in data analytics, web development, GIS, software QA, and customer success. I’m ready to take on a new role where I can channel my energy and advance my skills in software engineering.</p>
                     <p class="link" id="viewMore" onclick="viewMore()">Keep reading...</p>
-                    <p class="overflowText" id="overflowText1">Working at local technology start-up Bluelight Analytics I was able to explore a variety of directions, and build skills in user experience, scientific content creation, customer success, and tech support before shifting to quality assurance.</p>
-                    <p class="overflowText" id="overflowText2">This path of continued learning led me to the Remote Sensing Graduate Certificate program at NSCC's Centre of Geographic Sciences where I gained theoretical and hands-on experience in remote sensing and geomatics.</p>
-                    <p class="overflowText" id="overflowText3">Due to a life change I withdrew near the end of that program to pursue an opportunity with LogiSense as a Test Automation Developer, where I gained valuable experience using Python, Gherkin and Selenium in a fast-paced role. </p>
+                    <p class="overflowText" id="overflowText1">My formal education (B.Sc.) is in biology, where I focused on population genetics and completed an honours thesis analyzing the movement patterns of the Sable Island horses using positional data in MySQL and RStudio. After spending a year working in a university genetics lab I was also co-author on a paper assessing a new short DNA sequence for use in sexing sperm whales.</p>
+                    <p class="overflowText" id="overflowText2">Working at a local dental technology startup post-university gave me the chance to explore a wide range of directions, and I quickly gravitated towards data analytics and software development. I learned basic web development, created our company processes for software QA, ran complex data reports in MySQL, wrote a suite of tests for our GraphQL API using TypeScript, and created a tool using Python to automate our incoming data review process.</p>
+                    <p class="overflowText" id="overflowText3">Due to a family emergency I withdrew from an advanced graduate program in Remote Sensing and GIS at the NSCC Centre of Geographic Sciences (COGS) in the last couple of months. Instead I moved on to pursue an opportunity with LogiSense as a Test Automation Developer, where I gained valuable experience writing clean and efficient code in a fast-paced role.</p>
                     <p class="link" id="viewLess" onclick="viewLess()">See less...</p>
         
                 </div>
         
             </div>
 
-            <div class="container" id="outside_work">
+            <div class="container" id="skills">
 
-                <h2>Outside of work I can be found...</h2>
+                <h2 class="hr-lines">Skills</h2>
 
                 <div class="grid-container">
 
-                    
-                    <div class="grid-item">
-                        
-                        <img src="img/games.JPG">
-                        <h3>Playing video games with my cat</h3>
-    
-                    </div>
-
-                    <div class="grid-item">
-                        
-                        <img src="img/climbing.png">
-                        <h3>Climbing things</h3>
-
-                    </div>
-    
-    
-                    <div class="grid-item">
-                        
-                        <img src="img/biking.png">
-                        <h3>Mountain biking solo or with friends</h3>
-    
+                    <div class="grid-item centered_text">
+                            <p>Workflow automation using Python</p>
+                            <p>Selenium for test automation</p>
+                            <p>BDD using behave and Gherkin</p>
+                            <p>Jest and Pytest</p>
+                            <p>API testing using Postman</p>
+                            <p>SQL, GraphQL, R and RStudio</p>
+                            <p>HTML, CSS, Bootstrap</p>
+                            <p>Javascript, Typescript, Java</p>
+                            <p>Agile methodology and scrum framework</p>
+                            <p>Git and source control</p>
+                            <p>Algorithms and data structures</p>
                     </div>
 
                 </div>
+            </div>
 
+            <div class="container" id="projects">
+                <h2 class="hr-lines">Projects</h2>
+
+                <div class="grid-container centered_text">
+
+                    <a href="https://andydupuis.github.io/baking-conversion-tool/#" target="_blank" rel="noopener noreferrer">
+                    <div class="grid-item">
+                        <img src="img/baking_tool.png">
+                        <h4>Baking measurements conversion tool</h4>
+                    </div>
+                    </a>
+
+                    <a href="https://andydupuis.github.io/j_and_a_attic_remediation/"" target="_blank" rel="noopener noreferrer">
+                    <div class="grid-item">
+                        <img src="img/demo_website.png">
+                        <h4>Demo website for a local business</h4>
+                    </div>
+                    </a>
+
+                    <a href="tip_calculator.html" target="_blank" rel="noopener noreferrer">
+                    <div class="grid-item">
+                        <img src="img/tip_calculator.png">
+                        <h4>Service tip calculator</h4>
+                    </div>
+                    </a>
+
+
+                </div>
+                
             </div>
 
         </div>

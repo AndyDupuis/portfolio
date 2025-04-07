@@ -2,13 +2,19 @@ body {
     height: 100vh; 
     width: 100vw;
     margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* -------------------------------------------------------- */
 /* STYLES REGARDLESS OF SCREEN SIZE*/
 
 /* Shared Styles */
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+}
 a, .link {
     text-decoration: none;
     color: #0056D3;
@@ -18,6 +24,36 @@ a:hover, .link:hover {
 }
 .centered_text {
     text-align: center;
+}
+h2 {
+    text-align: center;
+}
+/* Add horizontal lines before and after title text */
+.hr-lines{
+  position: relative;
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+.hr-lines:before{
+  content:" ";
+  height: 2px;
+  width: 130px;
+  background: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.hr-lines:after{
+  content:" ";
+  height: 2px;
+  width: 130px;
+  background: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
 }
 
 /* Add some padding around content sections */
@@ -34,6 +70,15 @@ a:hover, .link:hover {
 }
 .grid-item {
     border-radius: 15px;
+    border: 1px solid black;
+}
+.grid-item img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.grid-item h3 {
+    padding: 3%;
+    text-align: center;
 }
 
 /* Landing Page */
@@ -44,7 +89,7 @@ a:hover, .link:hover {
     height: 100vh;
     padding: 3%;
 }
-#landing h1 {
+#landing h2, h3 {
     color: darkgray;
     text-align: center;
 }
@@ -55,13 +100,6 @@ a:hover, .link:hover {
 }
 #viewLess {
     display: none;
-}
-
-/* Skills Section */
-#skills .grid-item {
-    background-color: lightgrey;
-    border: 2px solid black;
-    padding: 3%;
 }
 
 /* About Me section default */
@@ -83,17 +121,15 @@ a:hover, .link:hover {
     float: left;
 }
 
-/* Outside of Work Section */
-#outside_work .grid-item {
-    border: 1px solid black;
+/* Skills Section */
+#skills .grid-container {
+    grid-template-columns: auto;
+    max-width: 60%;
+    margin-top: 0px;
 }
-#outside_work img {
-    width: 100%;
-    border-radius: 15px 15px 0 0;
-}
-#outside_work h3 {
-    padding: 3%;
-    text-align: center;
+#skills .grid-item {
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 /* Contact Icon/Links (side or bottom fixed) */
@@ -114,7 +150,8 @@ i:hover {
 
 /* Footer */
 #footer {
-    background-color: darkgrey;
+    color: grey;
+    background-color: black;
     text-align: center;
     padding: 3%;
 }
@@ -132,12 +169,6 @@ i:hover {
         padding-left: 2%;
     }
 
-    /* Make Skills Section have 2 columns*/
-    #skills .grid-container {
-        grid-template-columns: auto;
-        gap: 1%;
-    }
-
     /* Profile picture should not appear when screen width <900px */
     #me {
         display: none;
@@ -147,11 +178,6 @@ i:hover {
     }
     #bio {
         margin-top: 20%;
-    }
-
-    /* Make Outside of Work Section have 1 column */
-    #outside_work .grid-container {
-        grid-template-columns: auto;
     }
 
     /* Fix contact section to bottom instead of side to save space */
@@ -181,11 +207,6 @@ i:hover {
         font-size: 200%;
     }
 
-    /* Make Skills Section have 2 columns*/
-    #skills .grid-container {
-        grid-template-columns: auto auto;
-    }
-
     /* Profile picture should not appear when screen width <900px */
     #me {
         display: none;
@@ -198,7 +219,7 @@ i:hover {
     }
 
     /* Make Outside of Work Section have 1 column */
-    #outside_work .grid-container {
+    .grid-container {
         grid-template-columns: auto;
     }
     #footer {
@@ -227,11 +248,6 @@ i:hover {
 
 @media screen and (min-width: 900px) {
 
-    /* Make Skills Section have 2 columns*/
-    #skills .grid-container {
-        grid-template-columns: auto auto;
-    }
-
     /* Profile picture should appear when screen width >900px */
     #me {
         display: inline-block;
@@ -244,7 +260,7 @@ i:hover {
     }
 
     /* Make Outside of Work Section have 3 columns*/
-    #outside_work .grid-container {
+    .grid-container {
         grid-template-columns: auto auto auto;
     }
     #footer {
@@ -260,11 +276,6 @@ i:hover {
     #landing h1 {
         font-size: 250%;
     }
-
-    /* Make Skills Section have 3 columns*/
-    #skills .grid-container {
-        grid-template-columns: auto auto auto;
-    }
     
     /* Adjust margin above bio section */
     #bio {
@@ -272,7 +283,7 @@ i:hover {
     }
 
     /* Make Outside of Work Section have 3 columns*/
-    #outside_work .grid-container {
+    .grid-container {
         grid-template-columns: auto auto auto;
     }
     #footer {
