@@ -97,7 +97,8 @@ h2 {
     height: 100vh;
     padding: 3%;
 }
-#landing h2, h3 {
+#landing_text {
+    margin-top: 10%;
     color: darkgray;
     text-align: center;
 }
@@ -170,11 +171,14 @@ i:hover {
 
 /* Extremely small screen devices (600px width and below) */
 @media screen and (max-width: 600px) {
+    
+    /* Make horizontal lines next to titles smaller */
+    .hr-lines:before {
+        width: 70px;
+    }
 
-    /* Adjust landing page text size */
-    #landing h1 {
-        font-size: 150%;
-        padding-left: 2%;
+    .hr-lines:after {
+        width: 70px;
     }
 
     /* Profile picture should not appear when screen width <900px */
@@ -183,9 +187,6 @@ i:hover {
     }
     #bioText {
         width: 100%;
-    }
-    #bio {
-        margin-top: 20%;
     }
 
     /* Fix contact section to bottom instead of side to save space */
@@ -210,20 +211,12 @@ i:hover {
 /* Small screen devices (600px width and above) */
 @media screen and (min-width: 600px) {
 
-    /* Adjust landing page text size */
-    #landing h1 {
-        font-size: 200%;
-    }
-
     /* Profile picture should not appear when screen width <900px */
     #me {
         display: none;
     }
     #bioText {
         width: 100%;
-    }
-    #bio {
-        margin-top: 10%;
     }
 
     /* Make Outside of Work Section have 1 column */
@@ -279,11 +272,6 @@ i:hover {
 
 /* Very large screen devices (>1200px width) */
 @media screen and (min-width: 1200px) {
-
-    /* Adjust landing page text size */
-    #landing h1 {
-        font-size: 250%;
-    }
     
     /* Adjust margin above bio section */
     #bio {
